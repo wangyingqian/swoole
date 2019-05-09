@@ -1,0 +1,12 @@
+version: '2'
+services:
+    swoole:
+        container_name: swoole_test
+        build: .
+        ports:
+            - "8080:9501"
+        volumes:
+            - ./:/www/
+        stdin_open: true
+        tty: true 
+        entrypoint: ["php","-a"]
